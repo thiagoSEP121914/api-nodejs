@@ -3,8 +3,8 @@ import { Client } from "pg";
 const client = new Client({
     user:"postgres",
     host:"localhost",
-    password:"palmeiras23",
-    database:"Anime.db",
+    password:"***",
+    database:"******",
     port:5432,
 });
 

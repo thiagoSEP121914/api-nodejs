@@ -10,7 +10,7 @@ export async function findAll() {
         const result = await db.client.query(sql);
         return result.rows;
     } catch (err) {
-        console.log(`Erro da porrua: ${err}`)
+        console.log(`Erro: ${err}`)
     }
 }
 
@@ -22,7 +22,7 @@ export const findById = async (id) => {
         const result = await db.client.query(sql,[id]);
         return result.rows[0];
     } catch(err){
-        console.log(`Erro da pourra: ${err}`)
+        console.log(`Erro: ${err}`)
     }
 }
 
@@ -36,7 +36,7 @@ export const insert = async (anime) => {
     ]);
     return result.rows[0];
     }catch(err) {
-        console.log(`Erro nessa porra caralho nao deu para inserir. motivo:  ${err} `);
+        console.log(`Erro motivo:  ${err} `);
         throw err;
     }        
 }
@@ -67,7 +67,7 @@ export const deleteByid = async (id) => {
         const result = await db.client.query(sql, [id]);
         return anime;
     }catch(err) {
-        console.log(`Erro ao delete anime: ${err}`);
+        console.log(`Erro ao deletar anime: ${err}`);
         throw err;
     }
 }
